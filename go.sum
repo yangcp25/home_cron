@@ -1,0 +1,10 @@
+github.com/robfig/cron/v3 v3.0.1 h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs=
+github.com/robfig/cron/v3 v3.0.1/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=
+gitlab.hudonggz.cn/yangchunping/go-infra/log3 v0.0.2 h1:Zr5X74KcMVYQbMiqrzInQfV917TBjlaAfkJdU6LJzxA=
+gitlab.hudonggz.cn/yangchunping/go-infra/log3 v0.0.2/go.mod h1:sGk2VbobfU3PWPd4NBUa+gGVfo3rUSsfBs7ONohxPcE=
+gitlab.hudonggz.cn/yangchunping/go-infra/workerv2 v1.0.1 h1:KPreGbRAM9gdkjSgTb6Tz/bX1AoHE/0Al03omqEvy+o=
+gitlab.hudonggz.cn/yangchunping/go-infra/workerv2 v1.0.1/go.mod h1:BXjuiWywv0Bhh3f68iz4+F+ikr8v3QqoGPjSodNAiMo=
+go.uber.org/multierr v1.10.0 h1:S0h4aNzvfcFsC3dRF1jLoaov7oRaKqRGC/pUEJ2yvPQ=
+go.uber.org/multierr v1.10.0/go.mod h1:20+QtiLqy0Nd6FdQB9TLXag12DsQkrbs3htMFfDN80Y=
+go.uber.org/zap v1.27.1 h1:08RqriUEv8+ArZRYSTXy1LeBScaMpVSTBhCeaZYfMYc=
+go.uber.org/zap v1.27.1/go.mod h1:GB2qFLM7cTU87MWRP2mPIjqfIDnGu+VIO4V/SdhGo2E=
