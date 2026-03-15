@@ -145,4 +145,5 @@ func (s *PlanService) StartCron() {
 		zap.String("spec", s.cronSpec),
 	)
 	c.Start()
+	select {}
 }
