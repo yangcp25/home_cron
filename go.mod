@@ -7,12 +7,10 @@ require (
 	gitlab.hudonggz.cn/yangchunping/go-infra/db v1.0.3
 	gitlab.hudonggz.cn/yangchunping/go-infra/httpc v0.0.0
 	gitlab.hudonggz.cn/yangchunping/go-infra/log v1.0.2
-	gitlab.hudonggz.cn/yangchunping/go-infra/notify/feishu v0.0.0
+	gitlab.hudonggz.cn/yangchunping/go-infra/notify/feishu v0.0.0-20260327082033-6f0d7e8f2957
 	gitlab.hudonggz.cn/yangchunping/go-infra/workerv2 v1.0.1
 	go.uber.org/zap v1.27.1
 )
-
-replace gitlab.hudonggz.cn/yangchunping/go-infra/notify/feishu => /Users/ycp/work/code/jz/code/infra/go-infra/notify/feishu
 
 require (
 	github.com/dustin/go-humanize v1.0.1 // indirect

@@ -82,6 +82,8 @@ gitlab.hudonggz.cn/yangchunping/go-infra/httpc v0.0.0 h1:nKvOLwfo6eCu64+JbSw/aKd
 gitlab.hudonggz.cn/yangchunping/go-infra/httpc v0.0.0/go.mod h1:SuljOZJUuTuO0F2yIX7Mx8NeLTB+EN17UYEyWOn+hK0=
 gitlab.hudonggz.cn/yangchunping/go-infra/log v1.0.2 h1:yiXd7T4usMFLO8xI7vl1gzkgF/bFOaT89thKedWRiO8=
 gitlab.hudonggz.cn/yangchunping/go-infra/log v1.0.2/go.mod h1:8zpVR7ADMj8zHRN6+vdOES8kZVbSK7KB0lyLQ5V+W20=
+gitlab.hudonggz.cn/yangchunping/go-infra/notify/feishu v0.0.0-20260327082033-6f0d7e8f2957 h1:mmcQXjFATaglCAz+8pxJLDDlWd0dOl7I4gdHK3ruFaQ=
+gitlab.hudonggz.cn/yangchunping/go-infra/notify/feishu v0.0.0-20260327082033-6f0d7e8f2957/go.mod h1:fiN+yxWOM4nzUeK7d80clOMaVH7jjYXH9GaiboqEfUo=
 gitlab.hudonggz.cn/yangchunping/go-infra/workerv2 v1.0.1 h1:KPreGbRAM9gdkjSgTb6Tz/bX1AoHE/0Al03omqEvy+o=
 gitlab.hudonggz.cn/yangchunping/go-infra/workerv2 v1.0.1/go.mod h1:BXjuiWywv0Bhh3f68iz4+F+ikr8v3QqoGPjSodNAiMo=
 go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
