@@ -1,17 +1,21 @@
 # ... 你之前的配置 (LLM, Paths, Software 等)
 
+# 飞书通知配置
+Feishu:
+  WebhookURL: "https://open.feishu.cn/open-apis/bot/v2/hook/b99b6ef2-d80c-41b8-8e66-25884e823d8c"
+  Secret: ""      # 请填入你的飞书机器人签名密钥（如果有）
+
 # 🌟 新增的定时任务专属配置域
 CronTasks:
   # 专门针对“软著印钞机”这个任务的配置
-  AutoGenerate:
-    CronSpec: "0 30 8-19 * * *" # 把执行时间也抽出来，方便日后随时调
-    TaskNames:
-      - 小白也能过
-      - 友好的迷阵
-      - 这题不太难
-      - 思考一下再走
-      - 小脑袋要爆了
-      - 完美小操作
+  # AutoGenerate:
+  #   CronSpec: "0 47 * * * *" # 把执行时间也抽出来，方便日后随时调
+  #   TaskNames:
+  #     - 友好的迷阵
+  #     - 这题不太难
+  #     - 思考一下再走
+  #     - 小脑袋要爆了
+  #     - 完美小操作
 #      - 别被我骗了
 #      - 我真的有点菜
 #      - 跑偏了没关系
@@ -19,6 +23,11 @@ CronTasks:
 #      - 大脑加油站
 #      - 萌萌来闯关
 
+
+  # GitHub Trending 爬虫任务
+  GithubTrending:
+    CronSpec: "0 45 8 * * *"  # 每天早上8:45执行
+    TopN: 10  # 每个周期显示10个热门仓库
 
   # 留着以后扩展别的定时任务...
   # DataSync:

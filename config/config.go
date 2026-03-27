@@ -12,15 +12,30 @@ type AutoGenerateConfig struct {
 	TaskNames []string `yaml:"TaskNames" mapstructure:"TaskNames"`
 }
 
+// GitHub Trending 爬虫配置
+type GithubTrendingConfig struct {
+	CronSpec string `yaml:"CronSpec" mapstructure:"CronSpec"` // 定时任务表达式
+	TopN     int    `yaml:"TopN" mapstructure:"TopN"`         // 每个周期显示的仓库数量，默认10
+}
+
 // 2. 中间层：管理所有定时任务的域
 type CronTasksConfig struct {
-	AutoGenerate AutoGenerateConfig `yaml:"AutoGenerate" mapstructure:"AutoGenerate"`
+	AutoGenerate   AutoGenerateConfig   `yaml:"AutoGenerate" mapstructure:"AutoGenerate"`
+	GithubTrending GithubTrendingConfig `yaml:"GithubTrending" mapstructure:"GithubTrending"`
+}
+
+// 飞书通知配置
+type FeishuConfig struct {
+	WebhookURL string `yaml:"WebhookURL" mapstructure:"WebhookURL"` // 飞书机器人Webhook URL
+	Secret     string `yaml:"Secret" mapstructure:"Secret"`         // 飞书机器人签名密钥
 }
 
 // 3. 你的全局大配置结构体
 type Config struct {
 	// 🌟 挂载定时任务配置
 	CronTasks CronTasksConfig `yaml:"CronTasks" mapstructure:"CronTasks"`
+	// 飞书通知配置
+	Feishu FeishuConfig `yaml:"Feishu" mapstructure:"Feishu"`
 }
 
 // 全局变量保持不变

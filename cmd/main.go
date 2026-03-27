@@ -1,15 +1,12 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"homecron/config"
+	"os"
 
 	"gitlab.hudonggz.cn/yangchunping/go-infra/log"
-	"go.uber.org/zap"
 
-	"homecron/internal/db"
-	"homecron/internal/model"
 	"homecron/internal/service"
 )
 
@@ -25,23 +22,24 @@ func main() {
 	// 🌟 加一行调试代码，直接打印出来看看读到没有
 	fmt.Printf("🧐 当前读取的配置: %+v\n", config.AppConfig.CronTasks)
 
-	// 2. 实例化数据库 (调用咱们刚才写的那个工厂函数)
-	dbClient, err := db.Init("softgen.db")
-	if err != nil {
-		log.Fatal("数据库启动失败", zap.Error(err))
-	}
+	// 2. 依赖注入
+	planSvc := service.NewPlanService()
 
-	// 自动建表
-	err = dbClient.DB(context.Background()).AutoMigrate(
-		&model.SoftwareTask{},
-		&model.TaskStepLog{},
-	)
-	if err != nil {
-		log.Fatal("建表失败", zap.Error(err))
+	// 3. 检查是否需要立即执行
+	if len(os.Args) > 1 {
+		switch os.Args[1] {
+		case "trending":
+			log.Info("🚀 立即执行 GitHub Trending 任务")
+			planSvc.RunTrendingOnce()
+			return
+		case "software":
+			log.Info("🚀 立即执行软著印钞机任务")
+			planSvc.RunSoftwareOnce()
+			return
+		default:
+			log.Warn("⚠️ 未知参数，支持的参数: trending, software")
+		}
 	}
-
-	// 3. 依赖注入
-	planSvc := service.NewPlanService(dbClient)
 
 	// 4. 发车！
 	planSvc.StartCron()
