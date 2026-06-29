@@ -5,7 +5,9 @@ Feishu:
   WebhookURL: "https://open.feishu.cn/open-apis/bot/v2/hook/b99b6ef2-d80c-41b8-8e66-25884e823d8c"
   Secret: ""      # 请填入你的飞书机器人签名密钥（如果有）
 
-# 🌟 新增的定时任务专属配置域
+# 🌟 定时任务配置（CronTasks）
+# 注意：此处的配置现在仅作为「首次启动」时写入数据库(home_cron.db 的 cron_task_config 表)的默认值。
+# 数据库建好后，请直接修改数据库里的记录来调整定时任务，YAML 的改动不会再覆盖数据库。
 CronTasks:
   # 专门针对“软著印钞机”这个任务的配置
   # AutoGenerate:
